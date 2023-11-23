@@ -1,1 +1,56 @@
+import java.util.Collections;
+import java.util.List;
+import java.util.ArrayList;
+
+public class ExercicioParteUm {
+
+    public static void main(String[] args) {
+
+        List<String> nomes = new ArrayList<>();
+        nomes.add("Mark");
+        nomes.add("Bob");
+        nomes.add("Carla");
+        nomes.add("Susan");
+        Collections.sort(nomes);
+
+        System.out.println(nomes);
+
+
+    }
+
+
+
+
+
+}
+
+public class ExercicioParteDois {
+
+
+    public static void main(String[] args) {
+
+        String nome = "Felipe - Masc, Mariana - Fem, Fernando - Masc, Cristina - Fem";
+
+        String[] partes = nome.split(",");
+
+        System.out.println("Nomes Masculinos: ");
+        for (String parte : partes){
+            if (parte.contains("Masc")){
+                System.out.println(parte);
+            }
+        }
+
+        System.out.println("\nNomes Femininos: ");
+        for (String parte : partes){
+            if (parte.contains("Fem")){
+                System.out.println(parte);
+            }
+        }
+
+
+    }
+
+
+
+}
 
