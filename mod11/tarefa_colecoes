@@ -24,28 +24,44 @@ public class ExercicioParteUm {
 
 }
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ExercicioParteDois {
 
 
     public static void main(String[] args) {
 
-        String nome = "Felipe - Masc, Mariana - Fem, Fernando - Masc, Cristina - Fem";
+        String[] pessoas = {"Felipe Masc","Fernando Masc","Cristina Fem", "Mariana Fem"};
 
-        String[] partes = nome.split(",");
 
-        System.out.println("Nomes Masculinos: ");
-        for (String parte : partes){
-            if (parte.contains("Masc")){
-                System.out.println(parte);
+        List<String> homens = new ArrayList<>();
+        List<String> mulheres = new ArrayList<>();
+
+        for (String pessoa : pessoas) {
+
+            String[] partes = pessoa.split(" ");
+
+
+            if (partes.length == 2){
+                String nome = partes[0];
+                String sexo = partes[1];
+
+                if (sexo.equalsIgnoreCase("Masc")){
+                    homens.add(nome);
+
+                } else if (sexo.equalsIgnoreCase("Fem")) {
+                    mulheres.add(nome);
+
+                }
             }
+
         }
 
-        System.out.println("\nNomes Femininos: ");
-        for (String parte : partes){
-            if (parte.contains("Fem")){
-                System.out.println(parte);
-            }
-        }
+        System.out.println("Homens " + homens);
+        System.out.println("Mulheres " + mulheres);
+
+
 
 
     }
@@ -53,4 +69,5 @@ public class ExercicioParteDois {
 
 
 }
+
 
