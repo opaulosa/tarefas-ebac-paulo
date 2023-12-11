@@ -1,0 +1,45 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class ExercicioParteDois {
+
+
+    public static void main(String[] args) {
+
+        String[] pessoas = {"Felipe Masc","Fernando Masc","Cristina Fem", "Mariana Fem"};
+
+
+        List<String> homens = new ArrayList<>();
+        List<String> mulheres = new ArrayList<>();
+
+        for (String pessoa : pessoas) {
+
+            String[] partes = pessoa.split(" ");
+
+
+            if (partes.length == 2){
+                String nome = partes[0];
+                String sexo = partes[1];
+
+                if (sexo.equalsIgnoreCase("Masc")){
+                    homens.add(nome);
+
+                } else if (sexo.equalsIgnoreCase("Fem")) {
+                    mulheres.add(nome);
+
+                }
+            }
+
+        }
+
+        System.out.println("Homens " + homens);
+        System.out.println("Mulheres " + mulheres);
+
+
+
+
+    }
+
+
+
+}
